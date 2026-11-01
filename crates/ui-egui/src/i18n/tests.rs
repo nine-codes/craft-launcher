@@ -385,6 +385,8 @@ fn bosnian_locales_and_plurals_work() {
     assert_eq!(trn(Lang::BS, 5, "{n} app", "{n} apps"), "5 aplikacija");
     assert_eq!(trn(Lang::BS, 21, "{n} day ago", "{n} days ago"), "prije 21 dan");
     assert_eq!(tr(Lang::BS, "{month} {day}, {year}"), "{day}. {month} {year}.");
+    assert_eq!(super::tr_ctx(Lang::BS, "month", "Mar"), "mar");
+    assert_eq!(super::tr_ctx(Lang::BS, "month", "May"), "maj");
     assert_eq!(message(Lang::BS, "PhotoCraft updated to 0.5.0"), "PhotoCraft je ažuriran na 0.5.0");
 }
 
